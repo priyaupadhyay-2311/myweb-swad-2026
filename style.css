@@ -26,8 +26,9 @@
 }
 
 .search-box input{
-    width: 500px;
-    padding: 12px 12px 12px 45px;
+     width:100%;
+    max-width:500px;
+    padding:12px 12px 12px 45px;
 }
 input::placeholder{
     font-size: 18px;
@@ -210,7 +211,7 @@ input::placeholder{
     justify-content:center;
     align-items:center;
     gap:30px;
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
 }
 
 /* Individual Dish */
@@ -264,7 +265,7 @@ input::placeholder{
     justify-content: center;
     align-items:center;
     gap:30px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 .menu-card0{
     text-align: center;
@@ -313,7 +314,7 @@ input::placeholder{
     justify-content: center;
     align-items:center;
     gap:30px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
 }
 .menu-card1{
@@ -447,5 +448,56 @@ input::placeholder{
 @media(max-width:500px){
     .experience-container{
         grid-template-columns: 1fr;
+    }
+}
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        height:auto;
+        gap:15px;
+        padding:15px;
+    }
+
+    .logo{
+        margin-left:0;
+        font-size:2.2rem;
+    }
+
+    .search-box input{
+        width:90vw;
+        max-width:350px;
+    }
+
+    .hero-text{
+        left:5%;
+        right:5%;
+    }
+
+    .hero-text h1{
+        font-size:32px;
+    }
+
+    .hero-text p{
+        font-size:18px;
+    }
+
+    .area-container{
+        grid-template-columns:1fr;
+    }
+
+    .experience-container{
+        grid-template-columns:1fr;
+    }
+
+    .menu-container,
+    .menu-container0,
+    .menu-container1{
+        flex-wrap:wrap;
+    }
+
+    .footer-content{
+        flex-direction:column;
+        text-align:center;
     }
 }
